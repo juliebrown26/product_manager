@@ -1,0 +1,13 @@
+<div class="products" style="padding: 5px">
+    <h2>Products List</h2>
+    <div class="list" style="display: inline-flex; margin: 5px">
+        <div *ngFor="let product of products; let i = index">
+            <div class="product" style="margin: 5px; border: 1px solid black; width: 150px; height: 225px; text-align: center; padding: 5px;">
+                <div class="product_image"><img [src]="product.image_url" style="width: 125px;"></div>
+                <div class="product_title">{{ product.title }}</div>
+                <div class="product_price">${{ product.price }}</div>
+                <div class="options"><a href="/edit/{{product._id}}" type="button" class="btn btn-primary">Edit</a> | <button type="button" class="btn btn-danger" (click)="removeProduct(product, i)">Delete</button></div>
+            </div>
+        </div>
+    </div>
+</div>

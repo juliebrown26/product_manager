@@ -1,0 +1,7 @@
+<h2>Edit Product</h2>
+<div class="postForm" *ngIf="product">
+    <label>Title: <input type="text" name="product.title" [(ngModel)]="product.title"></label><br>
+    <label>Price: <input type="text" name="product.price" [(ngModel)]="product.price"></label><br>
+    <label>Image URL: <input type="text" name="produce.image_url" [(ngModel)]="product.image_url"></label><br>
+    <input type="button" class="btn btn-success" value="Update" (click)="editProduct(product)"> | <a href="/products" type="button" class="btn btn-danger" style="margin: 5px">Cancel</a>
+</div>
